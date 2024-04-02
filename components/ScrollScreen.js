@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   Text,
   StyleSheet,
@@ -16,14 +16,9 @@ const screenWidth = Dimensions.get("window").width;
 export default function CameraScreen({ navigation }) {
   const [type, setType] = useState(CameraType.back);
   const [permission, requestPermission] = Camera.useCameraPermissions();
-  const [isRecording, setIsRecording] = useState(false); // New state for recording status
   const cameraRef = useRef(null); // Reference to the camera
-  const [numberOfLines, setNumberOfLines] = useState(0);
-
-  const imageWidth = 400;
   const scrollX = useRef(new Animated.Value(0)).current; // for image scrolling
   const [scrollSpeed, setScrollSpeed] = useState(5); // speed of scrolling
-
   const VerticalLine = () => <View style={styles.verticalLine} />;
 
   const LineContainer = () => {
@@ -109,7 +104,7 @@ const styles = StyleSheet.create({
   overlay: {
     position: "absolute",
     top: 0,
-    left: -150,
+    left: -350,
     right: 0,
     bottom: 0,
     marginBottom: 90,
@@ -143,7 +138,6 @@ const styles = StyleSheet.create({
   buttonContainer: {
     position: "absolute",
     bottom: 0,
-
     padding: 16,
     width: "100%",
     zIndex: 2, // Ensure the button container is above the image overlay

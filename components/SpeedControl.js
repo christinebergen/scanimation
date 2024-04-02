@@ -1,13 +1,5 @@
-import {
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-  Button,
-  Animated,
-  Dimensions,
-} from "react-native";
-import Slider from "@react-native-community/slider";
+import { Text, StyleSheet, TouchableOpacity, View } from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 
 const SpeedControl = ({ speed, setSpeed }) => {
   const increaseSpeed = () => {
@@ -21,11 +13,11 @@ const SpeedControl = ({ speed, setSpeed }) => {
   return (
     <View style={styles.speedControlContainer}>
       <TouchableOpacity onPress={decreaseSpeed} style={styles.speedButton}>
-        <Text style={styles.speedButtonText}>-</Text>
+        <AntDesign name="minus" size={24} color="white" />
       </TouchableOpacity>
       <Text style={styles.speedDisplay}>{speed}</Text>
       <TouchableOpacity onPress={increaseSpeed} style={styles.speedButton}>
-        <Text style={styles.speedButtonText}>+</Text>
+      <AntDesign name="plus" size={24} color="white" />
       </TouchableOpacity>
     </View>
   );
@@ -51,6 +43,9 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 20,
     marginHorizontal: 10,
+    padding: 12,
+    zIndex: 2, // Ensure the button container is above the image overlay
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
   },
 });
 
