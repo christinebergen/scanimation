@@ -57,17 +57,11 @@ const HomeScreen = ({ navigation }) => {
       >
         <Text style={styles.button}>Scanimate My Tattoo!</Text>
       </TouchableOpacity>
-      
+
       <Text style={styles.findus}>
         Find Brittalicious Designs on Social Media:
       </Text>
       <View style={styles.social}>
-        <SocialButton
-          url="https://www.brittaliciousdesigns.com"
-          style={styles.web}
-        >
-          <Foundation name="web" size={24} color="white" />
-        </SocialButton>
         <SocialButton
           url="https://www.facebook.com/Brittaliciousdesigns"
           style={styles.facebook}
@@ -79,12 +73,6 @@ const HomeScreen = ({ navigation }) => {
           style={styles.instagram}
         >
           <FontAwesome name="instagram" size={24} color="white" />
-        </SocialButton>
-        <SocialButton
-          url="https://www.tiktok.com/@brittaliciousdesigns"
-          style={styles.tiktok}
-        >
-          <FontAwesome5 name="tiktok" size={24} color="white" />
         </SocialButton>
 
         {/* Add more buttons as needed */}
@@ -141,8 +129,8 @@ const styles = StyleSheet.create({
   facebook: {
     backgroundColor: "#3b5998",
     marginRight: 8,
-    padding: 8,
-    borderRadius: 6,
+    padding: 10,
+    borderRadius: 20,
   },
   instagram: {
     backgroundColor: "#C13584",

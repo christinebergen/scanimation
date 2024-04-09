@@ -110,18 +110,18 @@ const styles = StyleSheet.create({
     marginBottom: 90,
     marginTop: 60,
     flexDirection: "row", // Ensure horizontal layout
-    width: (12 + 2) * 500,
+    width: (12 + 1.2) * 500,
   },
   verticalLine: {
     width: 12, // Adjust the thickness of the line
-    marginRight: 2,
+    marginRight: 1.2,
     height: "100%",
     backgroundColor: "black",
   },
 
   lineContainer: {
     flexDirection: "row",
-    width: (12 + 2) * 500, // Double the width for continuous animation
+    width: (12 + 1.2) * 500, // Double the width for continuous animation
   },
 
   text: {
